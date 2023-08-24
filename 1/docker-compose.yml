@@ -1,0 +1,9 @@
+version: '3.9'
+
+services:
+  ma-app:
+    build:
+      context: .
+    command: 'tail -f /var/log/nginx/access.log'
+    ports:
+      - 8000:8000
